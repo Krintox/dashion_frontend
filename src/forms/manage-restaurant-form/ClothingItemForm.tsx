@@ -11,13 +11,13 @@ type ClothingItemFormProps = {
 };
 
 const ClothingItemForm = ({ onSubmit, existingImages = [] }: ClothingItemFormProps) => {
-  const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
+  // const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
   const [previewUrls, setPreviewUrls] = useState<string[]>([]);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files) {
-      setSelectedFiles(files);
+      // setSelectedFiles(files);
       const urls = Array.from(files).map(file => URL.createObjectURL(file));
       setPreviewUrls(urls);
     }
